@@ -4,45 +4,64 @@ import CalendlyEmbed from "@/components/calendly"
 import { useState, useEffect } from "react"
 import Image from "next/image";
 
+const WEBM = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.webm";
+const MP4 = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.mp4";
+
+function preloadVideo(src) {
+  return new Promise((resolve, reject) => {
+    const v = document.createElement("video");
+    v.src = src;
+    v.muted = true;
+    v.playsInline = true;
+    v.preload = "auto";
+    v.style.position = "absolute";
+    v.style.width = "0px";
+    v.style.height = "0px";
+    v.style.opacity = "0";
+    v.style.pointerEvents = "none";
+
+    const cleanup = () => v.remove();
+
+    v.onloadeddata = () => {
+      cleanup();
+      resolve(src);
+    };
+
+    v.onerror = (err) => {
+      cleanup();
+      reject(err);
+    };
+
+    document.body.appendChild(v);
+  });
+}
+
+
 export default function Home() {
   const [videoLoaded, setVideoLoaded] = useState(false)
   useEffect(() => {
-    const testVideo = document.createElement("video")
+    let done = false;
 
-    const sources = [
-      "/videos/eye.webm",
-      "/videos/eye.mp4",
-    ]
-
-    let loaded = false
-
-    const tryNext = (index: number) => {
-      if (index >= sources.length) return
-
-      testVideo.src = sources[index]
-      testVideo.preload = "auto"
-      testVideo.muted = true
-      testVideo.playsInline = true
-
-      testVideo.onloadeddata = () => {
-        if (!loaded) {
-          loaded = true
-          setVideoLoaded(true)
+    preloadVideo(WEBM)
+      .then(() => {
+        if (!done) {
+          setVideoLoaded(true);
+          done = true;
         }
-      }
-
-      testVideo.onerror = () => {
-        tryNext(index + 1)
-      }
-    }
-
-    tryNext(0)
-
-    return () => {
-      testVideo.onloadeddata = null
-      testVideo.onerror = null
-    }
-  }, [])
+      })
+      .catch(() => {
+        preloadVideo(MP4)
+          .then(() => {
+            if (!done) {
+              setVideoLoaded(true);
+              done = true;
+            }
+          })
+          .catch((err) => {
+            console.error("Both formats failed to load:", err);
+          });
+      });
+  }, []);
 
   return (
     <main className="min-h-screen" style={{ backgroundColor: "#01040f" }}>
@@ -57,8 +76,8 @@ export default function Home() {
               playsInline
               className="object-cover w-full h-full opacity-75"
             >
-              <source src="https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.webm" type="video/webm" />
-              <source src="https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.mp4" type="video/mp4" />
+              <source src={WEBM} type="video/webm" />
+              <source src={MP4} type="video/mp4" />
             </video>
           </div>
         )}
