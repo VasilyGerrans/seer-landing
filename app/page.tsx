@@ -7,7 +7,7 @@ import Image from "next/image";
 const WEBM = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.webm";
 const MP4 = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.mp4";
 
-function preloadVideo(src) {
+function preloadVideo(src: string) {
   return new Promise((resolve, reject) => {
     const v = document.createElement("video");
     v.src = src;
@@ -64,8 +64,8 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen" style={{ backgroundColor: "#01040f" }}>
-      <section className="relative min-h-screen flex flex-col" style={{ backgroundColor: "#01040f" }}>
+    <main className="min-h-screen">
+      <section className="relative min-h-screen flex flex-col">
         {/* Background Video */}
         {videoLoaded && (
           <div className="absolute inset-0">
@@ -168,7 +168,6 @@ export default function Home() {
       <section
         id="learn-more"
         className="relative flex items-center justify-center px-6 md:px-12 lg:px-24 py-20"
-        style={{ backgroundColor: "#01040f" }}
       >
         <div className="max-w-3xl">
           {/* Title */}
@@ -234,7 +233,6 @@ export default function Home() {
       {/* Introducing Seer Section */}
       <section
         className="relative flex items-center justify-center px-6 md:px-12 lg:px-24 py-20"
-        style={{ backgroundColor: "#01040f" }}
       >
         <div className="max-w-3xl">
           {/* Title */}
@@ -298,7 +296,6 @@ export default function Home() {
       <section
         id="early-access"
         className="relative flex items-center justify-center px-6 md:px-12 lg:px-24 py-20"
-        style={{ backgroundColor: "#01040f" }}
       >
         <div className="max-w-3xl w-full">
           {/* Title */}
@@ -348,7 +345,6 @@ export default function Home() {
       {/* Footer */}
       <footer
         className="relative border-t border-white/20 px-6 md:px-12 lg:px-24 py-12"
-        style={{ backgroundColor: "#01040f" }}
       >
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-white text-sm font-medium">
