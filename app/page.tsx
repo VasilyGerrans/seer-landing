@@ -57,8 +57,8 @@ export default function Home() {
               playsInline
               className="object-cover w-full h-full opacity-75"
             >
-              <source src="/videos/eye.webm" type="video/webm" />
-              <source src="/videos/eye.mp4" type="video/mp4" />
+              <source src="https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.webm" type="video/webm" />
+              <source src="https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.mp4" type="video/mp4" />
             </video>
           </div>
         )}
