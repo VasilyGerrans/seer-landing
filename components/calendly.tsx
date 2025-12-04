@@ -14,7 +14,7 @@ export default function CalendlyEmbed() {
         <div
             className="calendly-inline-widget h-[650px] w-full"
             data-url="https://calendly.com/vgerrans/seer-early-access?background_color=1a1a1a&text_color=ffffff&primary_color=42b850"
-            style={{ minWidth: "320px", height: "1100px" }}
+            style={{ minWidth: "320px", height: "1100px", backgroundColor: "#01040f" }}
         />
     );
 }

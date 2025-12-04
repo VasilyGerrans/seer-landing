@@ -19,6 +19,7 @@ function preloadVideo(src: string) {
     v.style.height = "0px";
     v.style.opacity = "0";
     v.style.pointerEvents = "none";
+    v.style.background = "#01040f";
 
     const cleanup = () => v.remove();
 
