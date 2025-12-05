@@ -322,6 +322,7 @@ export default function Home() {
       <section
         id="early-access"
         className="relative flex items-center justify-center px-6 md:px-12 lg:px-24 py-20"
+        style={{ paddingBottom: "0px" }}
       >
         <div className="max-w-3xl w-full">
           {/* Title */}
@@ -356,13 +357,15 @@ export default function Home() {
               <span className="text-gray-400">Seer Closed Beta (January 2026)</span>
             </div>
           </div>
-
-          <h3 className="text-white text-xl md:text-2xl font-black mb-8 text-center">
-            Meet the Founders and Get Early Access
-          </h3>
-
-          <CalendlyEmbed />
         </div>
+      </section>
+
+      <section className="px-6 md:px-12 lg:px-24 py-20" style={{ paddingTop: "0px" }}>
+        <h3 className="text-white text-xl md:text-2xl font-black mb-8 text-center">
+          Meet the Founders and Get Early Access
+        </h3>
+
+        <CalendlyEmbed />
       </section>
 
       {/* Footer */}
