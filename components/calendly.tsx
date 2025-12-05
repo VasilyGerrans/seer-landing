@@ -19,7 +19,7 @@ export default function CalendlyEmbed() {
                     maxWidth: "1200px",
                     height: "700px",
                 }}
-                data-url="https://calendly.com/vgerrans/seer-early-access?background_color=1a1a1a&text_color=ffffff&primary_color=42b850"
+                data-url="https://calendly.com/vgerrans/seer-early-access?background_color=1a1a1a&text_color=ffffff&primary_color=42b850&hide_gdpr_banner=1"
             ></div>
         </div>
     );
