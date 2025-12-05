@@ -4,8 +4,8 @@ import CalendlyEmbed from "@/components/calendly"
 import { useState, useEffect } from "react"
 import Image from "next/image";
 
-const WEBM = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.webm";
-const MP4 = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.mp4";
+const WEBM = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye-mobile.webm";
+const MP4 = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye-mobile.mp4";
 const WEBM_TRACE = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/tracer.webm";
 const MP4_TRACE = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/tracer.mp4"
 
@@ -118,8 +118,9 @@ export default function Home() {
               Get Early Access
             </button>
           </header>
+
           <div className="md:hidden mt-auto pb-20 text-left">
-            <h1 className="text-white text-5xl font-black leading-none max-w-6xl font-semibold uppercase">
+            <h1 className="text-white text-3xl sm:text-4xl md:text-6xl font-black leading-none max-w-6xl font-semibold uppercase">
               Turn Weeks of Transaction Debugging Into Minutes
             </h1>
 
@@ -323,9 +324,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Closed Beta Section */}
       <section
-        id="early-access"
         className="relative flex items-center justify-center px-6 md:px-12 lg:px-24 py-20"
         style={{ paddingBottom: "0px" }}
       >
@@ -365,7 +364,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 md:px-12 lg:px-24 py-20">
+      <section id="early-access" className="px-6 md:px-12 lg:px-24 py-20">
         <div className="w-full flex justify-center gap-6 mb-4">
           <a
             href="https://www.linkedin.com/in/vasilygerrans/"
