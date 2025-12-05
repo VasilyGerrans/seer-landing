@@ -4,6 +4,8 @@ import { useEffect } from "react";
 
 export default function CalendlyEmbed() {
     useEffect(() => {
+        localStorage.setItem("cookieConsent", "true")
+
         const script = document.createElement("script");
         script.src = "https://assets.calendly.com/assets/external/widget.js";
         script.async = true;
