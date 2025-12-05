@@ -306,7 +306,12 @@ export default function Home() {
               </video>
             </div>)}
 
-            <p className="leading-relaxed pt-2">
+            <p className="leading-relaxed">
+              The Seer RPC is a drop-in replacement for <code className="bg-white/10 px-2 py-1 rounded">solana-test-validator</code>, 
+              testnet, or mainnet RPCs.
+            </p>
+
+            <p className="leading-relaxed">
               Every transaction in your test generates a full transaction trace, with mappings to source code, including
               mainnet contracts, and variable values at the time of execution.
             </p>
@@ -360,13 +365,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 md:px-12 lg:px-24 py-20" style={{ paddingTop: "0px" }}>
-        <h3 className="text-white text-xl md:text-2xl font-black mb-14 text-center">
-          Meet the Team and Get Early Access
-        </h3>
-
-        {/* TEAM PICTURES */}
-        <div className="w-full flex justify-center gap-6">
+      <section className="px-6 md:px-12 lg:px-24 py-20">
+        <div className="w-full flex justify-center gap-6 mb-4">
           <a
             href="https://www.linkedin.com/in/vasilygerrans/"
             target="_blank"
@@ -412,7 +412,9 @@ export default function Home() {
             </div>
           </a>
         </div>
-
+        <h3 className="text-white text-xl md:text-2xl font-black mb-10 text-center">
+          Meet the Team and Get Early Access
+        </h3>
         <CalendlyEmbed />
       </section>
 
