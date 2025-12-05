@@ -6,6 +6,8 @@ import Image from "next/image";
 
 const WEBM = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.webm";
 const MP4 = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.mp4";
+const WEBM_TRACE = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/tracer.webm";
+const MP4_TRACE = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/tracer.mp4"
 
 function preloadVideo(src: string) {
   return new Promise((resolve, reject) => {
@@ -39,36 +41,47 @@ function preloadVideo(src: string) {
 
 
 export default function Home() {
-  const [videoLoaded, setVideoLoaded] = useState(false)
-  useEffect(() => {
-    let done = false;
+  const [eyeLoaded, setEyeLoaded] = useState(false)
+  const [traceLoaded, setTraceLoaded] = useState(false)
 
-    preloadVideo(WEBM)
-      .then(() => {
-        if (!done) {
-          setVideoLoaded(true);
-          done = true;
+  useEffect(() => {
+    const loadEye = async () => {
+      try {
+        await preloadVideo(WEBM);
+        setEyeLoaded(true);
+      } catch {
+        try {
+          await preloadVideo(MP4);
+          setEyeLoaded(true);
+        } catch (err) {
+          console.error("Eye video failed:", err);
         }
-      })
-      .catch(() => {
-        preloadVideo(MP4)
-          .then(() => {
-            if (!done) {
-              setVideoLoaded(true);
-              done = true;
-            }
-          })
-          .catch((err) => {
-            console.error("Both formats failed to load:", err);
-          });
-      });
+      }
+    };
+
+    const loadTrace = async () => {
+      try {
+        await preloadVideo(WEBM_TRACE);
+        setTraceLoaded(true);
+      } catch {
+        try {
+          await preloadVideo(MP4_TRACE);
+          setTraceLoaded(true);
+        } catch (err) {
+          console.error("Trace video failed:", err);
+        }
+      }
+    };
+
+    loadEye();
+    loadTrace();
   }, []);
+
 
   return (
     <main className="min-h-screen">
       <section className="relative min-h-screen flex flex-col">
-        {/* Background Video */}
-        {videoLoaded && (
+        {eyeLoaded && (
           <div className="absolute inset-0">
             <video
               autoPlay
@@ -281,6 +294,18 @@ export default function Home() {
               </div>
             </div>
 
+            {traceLoaded && (<div className="my-8 mt-10 mb-10 overflow-hidden rounded-2xl">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={WEBM_TRACE} type="video/webm" />
+                <source src={MP4_TRACE} type="video/mp4" />
+              </video>
+            </div>)}
+
             <p className="leading-relaxed pt-2">
               Every transaction in your test generates a full transaction trace, with mappings to source code, including
               mainnet contracts, and variable values at the time of execution.
@@ -332,13 +357,10 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Meet the Founders */}
           <h3 className="text-white text-xl md:text-2xl font-black mb-8 text-center">
             Meet the Founders and Get Early Access
           </h3>
 
-          {/* Calendly Widget */}
-          {/* Calendly inline widget begin */}
           <CalendlyEmbed />
         </div>
       </section>

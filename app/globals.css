@@ -115,7 +115,9 @@
 }
 
 @layer base {
-  html, body {
+
+  html,
+  body {
     background: #01040f !important;
     background-color: #01040f !important;
   }
@@ -136,14 +138,19 @@
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     color: white;
 
     padding: 0.6rem 1.3rem;
     border-radius: 9999px;
     font-weight: 500;
 
-    transition: background 0.3s ease, color 0.3s ease;
+    transition:
+      background 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 0;
   }
 
@@ -151,20 +158,15 @@
     content: "";
     position: absolute;
     inset: 0;
-    padding: 2px; /* thickness of gradient ring */
+    padding: 2px;
     border-radius: inherit;
-
     background: linear-gradient(to top right, #764dff, #29ff49);
-
-    /* The mask creates the border effect */
     -webkit-mask:
       linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-
     pointer-events: none;
-
     transition: opacity 0.3s ease;
     z-index: -1;
   }
@@ -172,6 +174,8 @@
   .gradient-button:hover {
     background: linear-gradient(to top right, #764dff, #29ff49);
     color: black;
+    transform: scale(1.005);
+    box-shadow: 0 8px 24px rgba(118, 77, 255, 0.35);
   }
 
   .gradient-button:hover::before {
