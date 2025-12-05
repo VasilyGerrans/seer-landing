@@ -9,92 +9,22 @@ const MP4 = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye-mobile.
 const WEBM_TRACE = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/tracer.webm";
 const MP4_TRACE = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/tracer.mp4"
 
-function preloadVideo(src: string) {
-  return new Promise((resolve, reject) => {
-    const v = document.createElement("video");
-    v.src = src;
-    v.muted = true;
-    v.playsInline = true;
-    v.preload = "auto";
-    v.style.position = "absolute";
-    v.style.width = "0px";
-    v.style.height = "0px";
-    v.style.opacity = "0";
-    v.style.pointerEvents = "none";
-    v.style.background = "#01040f";
-
-    const cleanup = () => v.remove();
-
-    v.onloadeddata = () => {
-      cleanup();
-      resolve(src);
-    };
-
-    v.onerror = (err) => {
-      cleanup();
-      reject(err);
-    };
-
-    document.body.appendChild(v);
-  });
-}
-
-
 export default function Home() {
-  const [eyeLoaded, setEyeLoaded] = useState(false)
-  const [traceLoaded, setTraceLoaded] = useState(false)
-
-  useEffect(() => {
-    const loadEye = async () => {
-      try {
-        await preloadVideo(WEBM);
-        setEyeLoaded(true);
-      } catch {
-        try {
-          await preloadVideo(MP4);
-          setEyeLoaded(true);
-        } catch (err) {
-          console.error("Eye video failed:", err);
-        }
-      }
-    };
-
-    const loadTrace = async () => {
-      try {
-        await preloadVideo(WEBM_TRACE);
-        setTraceLoaded(true);
-      } catch {
-        try {
-          await preloadVideo(MP4_TRACE);
-          setTraceLoaded(true);
-        } catch (err) {
-          console.error("Trace video failed:", err);
-        }
-      }
-    };
-
-    loadEye();
-    loadTrace();
-  }, []);
-
-
   return (
     <main className="min-h-screen">
       <section className="relative min-h-screen flex flex-col">
-        {eyeLoaded && (
-          <div className="absolute inset-0">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="object-cover w-full h-full opacity-75"
-            >
-              <source src={WEBM} type="video/webm" />
-              <source src={MP4} type="video/mp4" />
-            </video>
-          </div>
-        )}
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="object-cover w-full h-full opacity-75"
+          >
+            <source src={WEBM} type="video/webm" />
+            <source src={MP4} type="video/mp4" />
+          </video>
+        </div>
 
         {/* Content Overlay */}
         <div className="relative z-10 flex flex-col min-h-screen px-6 md:px-12 lg:px-20">
@@ -295,17 +225,15 @@ export default function Home() {
               </div>
             </div>
 
-            {traceLoaded && (<div className="my-8 mt-10 mb-10 overflow-hidden rounded-2xl">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src={WEBM_TRACE} type="video/webm" />
-                <source src={MP4_TRACE} type="video/mp4" />
-              </video>
-            </div>)}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src={WEBM_TRACE} type="video/webm" />
+              <source src={MP4_TRACE} type="video/mp4" />
+            </video>
 
             <p className="leading-relaxed">
               The Seer RPC is a drop-in replacement for <code className="bg-white/10 px-2 py-1 rounded">solana-test-validator</code>, 
