@@ -42,7 +42,16 @@ export default function Home() {
               onClick={() => {
                 document.getElementById("early-access")?.scrollIntoView({ behavior: "smooth" })
               }}
-              className="gradient-button text-white px-6 py-2 sm:px-6 md:px-8 md:py-3 rounded-full font-medium text-sm md:text-base md:right-8"
+              className="
+                gradient-button 
+                text-white 
+                px-4 py-1.5
+                md:px-8 md:py-3
+                rounded-full 
+                font-medium 
+                text-sm 
+                md:text-base 
+                md:right-8"
             >
               Get Early Access
             </button>
