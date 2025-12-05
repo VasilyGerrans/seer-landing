@@ -1,11 +1,10 @@
 "use client"
 
 import CalendlyEmbed from "@/components/calendly"
-import { useState, useEffect } from "react"
 import Image from "next/image";
 
-const WEBM = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye-mobile.webm";
-const MP4 = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye-mobile.mp4";
+const WEBM = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.webm";
+const MP4 = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.mp4";
 const WEBM_TRACE = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/tracer.webm";
 const MP4_TRACE = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/tracer.mp4"
 
