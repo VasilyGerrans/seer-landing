@@ -224,15 +224,17 @@ export default function Home() {
               </div>
             </div>
 
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-            >
-              <source src={WEBM_TRACE} type="video/webm" />
-              <source src={MP4_TRACE} type="video/mp4" />
-            </video>
+            <div className="my-8 mt-10 mb-10 overflow-hidden rounded-2xl">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={WEBM_TRACE} type="video/webm" />
+                <source src={MP4_TRACE} type="video/mp4" />
+              </video>
+            </div>
 
             <p className="leading-relaxed">
               The Seer RPC is a drop-in replacement for <code className="bg-white/10 px-2 py-1 rounded">solana-test-validator</code>, 
