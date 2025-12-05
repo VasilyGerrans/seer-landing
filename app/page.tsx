@@ -334,23 +334,23 @@ export default function Home() {
           <div className="space-y-4 mb-12 md:mb-16">
             <div className="flex items-center gap-4 text-white text-sm md:text-base font-medium">
               <span className="text-green-500 text-xl">✓</span>
-              <span>Project Inception (August 2026)</span>
+              <span>Project Inception (August 2025)</span>
             </div>
             <div className="flex items-center gap-4 text-white text-sm md:text-base font-medium">
               <span className="text-green-500 text-xl">✓</span>
-              <span>Proof of Concept (September 2026)</span>
+              <span>Proof of Concept (September 2025)</span>
             </div>
             <div className="flex items-center gap-4 text-white text-sm md:text-base font-medium">
               <span className="text-green-500 text-xl">✓</span>
-              <span>Cypherpunk Hackathon (October 2026)</span>
+              <span>Cypherpunk Hackathon (October 2025)</span>
             </div>
             <div className="flex items-center gap-4 text-white text-sm md:text-base font-medium">
               <span className="text-green-500 text-xl">✓</span>
-              <span>Seer CLI (November 2026)</span>
+              <span>Seer CLI (November 2025)</span>
             </div>
             <div className="flex items-center gap-4 text-white text-sm md:text-base font-medium">
               <span className="text-yellow-500 text-xl">⏳</span>
-              <span>Seer RPC (December 2026)</span>
+              <span>Seer RPC (December 2025)</span>
             </div>
             <div className="flex items-center gap-4 text-white text-sm md:text-base font-medium">
               <span className="text-gray-500 text-xl">⋯</span>
