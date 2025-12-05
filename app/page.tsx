@@ -136,7 +136,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <hr className="block md:hidden w-1/2 mx-auto border-white/20 mb-3" />
+                <hr className="block md:hidden w-1/4 mx-auto border-white/20 mb-3" />
                 <div className="
                   flex flex-col justify-between text-center leading-relaxed md:px-4 
                   md:h-32 md:h-auto border-white/20
@@ -148,7 +148,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <hr className="block md:hidden w-1/2 mx-auto border-white/20 mb-3" />
+                <hr className="block md:hidden w-1/4 mx-auto border-white/20 mb-3" />
                 <div className="
                   flex flex-col justify-between text-center leading-relaxed md:px-4 
                   md:h-32 md:h-auto border-white/20
@@ -196,7 +196,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <hr className="block md:hidden w-1/2 mx-auto border-white/20 mb-3" />
+                <hr className="block md:hidden w-1/4 mx-auto border-white/20 mb-3" />
                 <div className="
                   flex flex-col justify-between text-center leading-relaxed md:px-4 
                   md:h-32 md:h-auto border-white/20
@@ -210,7 +210,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <hr className="block md:hidden w-1/2 mx-auto border-white/20 mb-3" />
+                <hr className="block md:hidden w-1/4 mx-auto border-white/20 mb-3" />
                 <div className="
                   flex flex-col justify-between text-center leading-relaxed md:px-4 
                   md:h-32 md:h-auto border-white/20
