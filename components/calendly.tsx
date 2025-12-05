@@ -4,8 +4,6 @@ import { useEffect } from "react";
 
 export default function CalendlyEmbed() {
     useEffect(() => {
-        localStorage.setItem("cookieConsent", "true")
-
         const script = document.createElement("script");
         script.src = "https://assets.calendly.com/assets/external/widget.js";
         script.async = true;
@@ -15,7 +13,7 @@ export default function CalendlyEmbed() {
     return (
         <div className="w-full flex justify-center">
             <div
-                className="calendly-inline-widget"
+                className="calendly-inline-widget overflow-hidden"
                 style={{
                     width: "100%",
                     maxWidth: "1200px",
