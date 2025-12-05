@@ -361,9 +361,57 @@ export default function Home() {
       </section>
 
       <section className="px-6 md:px-12 lg:px-24 py-20" style={{ paddingTop: "0px" }}>
-        <h3 className="text-white text-xl md:text-2xl font-black mb-8 text-center">
-          Meet the Founders and Get Early Access
+        <h3 className="text-white text-xl md:text-2xl font-black mb-14 text-center">
+          Meet the Team and Get Early Access
         </h3>
+
+        {/* TEAM PICTURES */}
+        <div className="w-full flex justify-center gap-6">
+          <a
+            href="https://www.linkedin.com/in/vasilygerrans/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="w-20 h-20 rounded-full overflow-hidden">
+              <img
+                src="/images/vasily.png"
+                alt="Vasily"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/yegor-parfenenka/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="w-20 h-20 rounded-full overflow-hidden">
+              <img
+                src="/images/yegor.png"
+                alt="Yegor"
+                className="w-full h-full object-cover scale-125"
+              />
+            </div>
+          </a>
+
+          <a
+            href="https://github.com/deithblaidd"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="w-20 h-20 rounded-full overflow-hidden">
+              <img
+                src="/images/deithblaidd.jpg"
+                alt="Deithblaidd"
+                className="w-full h-full object-cover scale-125"
+              />
+            </div>
+          </a>
+        </div>
 
         <CalendlyEmbed />
       </section>
