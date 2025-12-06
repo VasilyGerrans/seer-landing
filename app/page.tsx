@@ -11,6 +11,21 @@ const MP4_TRACE = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/trace
 export default function Home() {
   return (
     <main className="min-h-screen">
+      {process.env.NODE_ENV === "development" && (
+        <div className="
+      fixed bottom-4 right-4 z-[9999]
+      px-2 py-1 rounded bg-black/70 text-white text-xs font-mono
+      pointer-events-none
+    ">
+          <span className="block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden">DEFAULT</span>
+          <span className="hidden sm:block md:hidden lg:hidden xl:hidden 2xl:hidden">SM</span>
+          <span className="hidden md:block lg:hidden xl:hidden 2xl:hidden">MD</span>
+          <span className="hidden lg:block xl:hidden 2xl:hidden">LG</span>
+          <span className="hidden xl:block 2xl:hidden">XL</span>
+          <span className="hidden 2xl:block">2XL</span>
+        </div>
+      )}
+
       <section className="relative min-h-screen flex flex-col">
         <div className="absolute inset-0">
           <video
@@ -50,57 +65,19 @@ export default function Home() {
                 rounded-full 
                 font-medium 
                 text-sm 
-                md:text-base 
-                md:right-8"
+                md:text-base"
             >
               Get Early Access
             </button>
           </header>
 
-          <div className="md:hidden mt-auto pb-20 text-left">
-            <h1 className="text-white text-3xl sm:text-4xl md:text-6xl font-black leading-none max-w-6xl font-semibold uppercase">
-              Turn Weeks of Transaction Debugging Into Minutes
-            </h1>
-
-            <div className="mt-8 mx-auto w-fit">
-              <button
-                onClick={() => {
-                  document.getElementById("learn-more")?.scrollIntoView({ behavior: "smooth" })
-                }}
-                className="gradient-button text-white px-8 py-3 rounded-full font-medium text-base"
-              >
-                Learn More
-              </button>
-            </div>
-          </div>
-          {/* --- TABLET (md–xl): text bottom-left, CTA below it, right-aligned --- */}
-          <div className="hidden md:block xl:hidden">
-            <div className="absolute bottom-20 left-12 right-12">
-              <h1 className="text-white sm:text-6xl md:text-7xl xl:text-8xl font-black leading-none max-w-6xl font-semibold uppercase">
+          <div>
+            <div className="absolute md:bottom-20 md:left-12 md:right-12 2xl:bottom-32 2xl:left-48 2xl:right-20 xl:bottom-20 xl:left-24 xl:right-12 xl:pb-0 lg:pb-20 mt-auto pb-20 text-left bottom-20">
+              <h1 className="text-white text-3xl sm:text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl font-black leading-none md:max-w-3xl xl:max-w-4xl 2xl:max-w-6xl font-semibold uppercase">
                 Turn Weeks of Transaction Debugging Into Minutes
               </h1>
 
-              <div className="mt-8 flex justify-end">
-                <button
-                  onClick={() => {
-                    document.getElementById("learn-more")?.scrollIntoView({ behavior: "smooth" })
-                  }}
-                  className="gradient-button text-white px-10 py-4 rounded-full font-medium text-base"
-                >
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* --- DESKTOP (xl+): mirrored bottom-left & bottom-right layout --- */}
-          <div className="hidden xl:block">
-            <div className="absolute bottom-34 left-50 right-20">
-              <h1 className="text-white text-8xl sm:text-6xl md:text-7xl xl:text-8xl 2xl:text-8xl font-black leading-none max-w-6xl font-semibold uppercase">
-                Turn Weeks of Transaction Debugging Into Minutes
-              </h1>
-
-              <div className="absolute right-8 bottom-0">
+              <div className="absolute md:right-8 xl:bottom-0 md:-translate-x-0 md:left-auto sm:flex sm:justify-end mt-8 mx-auto w-fit left-1/2 -translate-x-1/2">
                 <button
                   onClick={() => {
                     document.getElementById("learn-more")?.scrollIntoView({ behavior: "smooth" })
@@ -246,7 +223,7 @@ export default function Home() {
             </div>
 
             <p className="leading-relaxed">
-              The Seer RPC is a drop-in replacement for <code className="bg-white/10 px-2 py-1 rounded">solana-test-validator</code>, 
+              The Seer RPC is a drop-in replacement for <code className="bg-white/10 px-2 py-1 rounded">solana-test-validator</code>,
               testnet, or mainnet RPCs.
             </p>
 
