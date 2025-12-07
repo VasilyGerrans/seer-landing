@@ -99,7 +99,8 @@ export default function TracerView({ hash }: TracerViewProps) {
                         <div className="flex items-center gap-3">
                             <Button
                                 size="sm"
-                                className="flex items-center gap-2 bg-default text-accent border-accent hover:bg-highlight"
+                                variant="ghost"
+                                className="flex items-center gap-2 bg-default text-accent border-accent hover:bg-accent"
                                 onClick={() => window.open("https://github.com/yparf/seer-demo/tree/be6c183708cf82554cbf661fe1380be73f5514de", "_blank")}
                             >
                                 <Github className="h-4 w-4" />
@@ -107,7 +108,8 @@ export default function TracerView({ hash }: TracerViewProps) {
 
                             <Button
                                 size="sm"
-                                className="gap-2 bg-accent hover:bg-highlight"
+                                variant="ghost"
+                                className="gap-2"
                                 onClick={() => setExpanded(false)}
                             >
                                 <X className="h-4 w-4" />
