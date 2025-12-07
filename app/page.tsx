@@ -97,7 +97,7 @@ export default function Home() {
       >
         <div className="max-w-5xl">
           {/* Title */}
-          <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-black mb-8 md:mb-10">
+          <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-black mb-8 md:mb-10 text-center">
             Transaction debugging should be quick
           </h2>
 
@@ -160,7 +160,7 @@ export default function Home() {
         className="relative flex items-center justify-center px-6 md:px-12 lg:px-10 py-20"
       >
         <div className="max-w-5xl">
-          <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-black mb-8 md:mb-10">Introducing Seer</h2>
+          <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-black mb-8 md:mb-10 text-center">Introducing Seer</h2>
           <div className="text-white text-sm md:text-base space-y-6 font-medium">
             <div className="max-w-2xl mx-auto py-4">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 md:h-14">
@@ -237,7 +237,7 @@ export default function Home() {
         className="relative flex items-center justify-center px-6 md:px-12 lg:px-10 py-20"
         style={{ paddingBottom: "0px" }}
       >
-        <div className="max-w-4xl w-full">
+        <div className="max-w-5xl w-full">
           <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-black mb-12 md:mb-16 text-center">
             Closed Beta Coming January 2026
           </h2>

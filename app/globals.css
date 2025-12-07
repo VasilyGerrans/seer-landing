@@ -72,6 +72,8 @@
   --destructive: oklch(0.6412 0.2689 29.65);
   --destructive-foreground: oklch(0.96 0 0);
 
+  --highlight: oklch(0.5971 0.2738 307.06);
+
   --border: oklch(0.23 0 0);                     /* subtle border */
   --input: oklch(0.23 0 0);
   --ring: oklch(0.55 0 0);
@@ -114,6 +116,7 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-highlight: var(--highlight);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -181,7 +184,7 @@
     inset: 0;
     padding: 2px;
     border-radius: inherit;
-    background: linear-gradient(to top right, #764dff, #29ff49);
+    background: linear-gradient(to top right, #ab30fa, #29ff49);
     -webkit-mask:
       linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
@@ -193,7 +196,7 @@
   }
 
   .gradient-button:hover {
-    background: linear-gradient(to top right, #764dff, #29ff49);
+    background: linear-gradient(to top right, #ab30fa, #29ff49);
     color: black;
     transform: scale(1.005);
     box-shadow: 0 8px 24px rgba(118, 77, 255, 0.35);
