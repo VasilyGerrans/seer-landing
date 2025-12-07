@@ -1,0 +1,690 @@
+[
+  {
+    "instruction": 3480,
+    "step": {
+      "file": "programs/nftminter/src/lib.rs",
+      "line": 25,
+      "call": false,
+      "function": "nftminter::process_instruction"
+    },
+    "children": [
+      {
+        "instruction": 3504,
+        "step": {
+          "file": "programs/nftminter/src/lib.rs",
+          "line": 30,
+          "call": true,
+          "function": "borsh::de::BorshDeserialize::try_from_slice"
+        },
+        "children": [
+          {
+            "instruction": 3504,
+            "step": {
+              "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+              "line": 46,
+              "call": false,
+              "function": "borsh::de::BorshDeserialize::try_from_slice"
+            },
+            "children": [
+              {
+                "instruction": 3504,
+                "step": {
+                  "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+                  "line": 40,
+                  "call": true,
+                  "function": "<nftminter::NftMinterInstruction as borsh::de::BorshDeserialize>::deserialize_reader"
+                },
+                "children": [
+                  {
+                    "instruction": 3504,
+                    "step": {
+                      "file": "programs/nftminter/src/lib.rs",
+                      "line": 19,
+                      "call": false,
+                      "function": "<nftminter::NftMinterInstruction as borsh::de::BorshDeserialize>::deserialize_reader"
+                    },
+                    "children": [
+                      {
+                        "instruction": 3504,
+                        "step": {
+                          "file": "programs/nftminter/src/lib.rs",
+                          "line": 19,
+                          "call": true,
+                          "function": "<u8 as borsh::de::BorshDeserialize>::deserialize_reader"
+                        },
+                        "children": [
+                          {
+                            "instruction": 3504,
+                            "step": {
+                              "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+                              "line": 148,
+                              "call": false,
+                              "function": "<u8 as borsh::de::BorshDeserialize>::deserialize_reader"
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": 3536,
+                        "step": {
+                          "file": "programs/nftminter/src/lib.rs",
+                          "line": 19,
+                          "call": true,
+                          "function": "<nftminter::NftMinterInstruction as borsh::de::EnumExt>::deserialize_variant"
+                        },
+                        "children": [
+                          {
+                            "instruction": 3536,
+                            "step": {
+                              "file": "programs/nftminter/src/lib.rs",
+                              "line": 19,
+                              "call": false,
+                              "function": "<nftminter::NftMinterInstruction as borsh::de::EnumExt>::deserialize_variant"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "instruction": 3704,
+        "step": {
+          "file": "programs/nftminter/src/lib.rs",
+          "line": 32,
+          "call": true,
+          "function": "nftminter::initialize_config"
+        },
+        "children": [
+          {
+            "instruction": 3704,
+            "step": {
+              "file": "programs/nftminter/src/lib.rs",
+              "line": 37,
+              "call": false,
+              "function": "nftminter::initialize_config"
+            },
+            "children": [
+              {
+                "instruction": 3704,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 40,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 3704,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 3728,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 41,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 3728,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 4064,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 42,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 4064,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 4112,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 44,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 4152,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 49,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 4264,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 50,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 4272,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 50,
+                  "call": true,
+                  "function": "core::cmp::PartialEq::ne"
+                },
+                "children": [
+                  {
+                    "instruction": 4272,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/cmp.rs",
+                      "line": 261,
+                      "call": false,
+                      "function": "core::cmp::PartialEq::ne"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 4584,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 55,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 4592,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 55,
+                  "call": true,
+                  "function": "<core::result::Result<T,E> as core::ops::try_trait::Try>::branch"
+                },
+                "children": [
+                  {
+                    "instruction": 4592,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/result.rs",
+                      "line": 1995,
+                      "call": false,
+                      "function": "<core::result::Result<T,E> as core::ops::try_trait::Try>::branch"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 4704,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 57,
+                  "call": true,
+                  "function": "solana_rent::Rent::minimum_balance"
+                },
+                "children": [
+                  {
+                    "instruction": 4704,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-rent-2.2.1/src/lib.rs",
+                      "line": 93,
+                      "call": false,
+                      "function": "solana_rent::Rent::minimum_balance"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 4904,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 60,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 4920,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 59,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 5008,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 69,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 5208,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 70,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 5320,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 67,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 5392,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 67,
+                  "call": true,
+                  "function": "<core::result::Result<T,E> as core::ops::try_trait::Try>::branch"
+                },
+                "children": [
+                  {
+                    "instruction": 5392,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/result.rs",
+                      "line": 1995,
+                      "call": false,
+                      "function": "<core::result::Result<T,E> as core::ops::try_trait::Try>::branch"
+                    },
+                    "children": []
+                  },
+                  {
+                    "instruction": 5384,
+                    "step": {
+                      "file": "",
+                      "line": 0,
+                      "call": false,
+                      "function": "Program 11111111111111111111111111111111 invoke [2]"
+                    },
+                    "children": []
+                  },
+                  {
+                    "instruction": 5384,
+                    "step": {
+                      "file": "",
+                      "line": 0,
+                      "call": false,
+                      "function": "Program 11111111111111111111111111111111 success"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 5440,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 71,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 5456,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 74,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 5520,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 73,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 5528,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 77,
+                  "call": true,
+                  "function": "<alloc::rc::Rc<T,A> as core::ops::deref::Deref>::deref"
+                },
+                "children": [
+                  {
+                    "instruction": 5528,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/alloc/src/rc.rs",
+                      "line": 2227,
+                      "call": false,
+                      "function": "<alloc::rc::Rc<T,A> as core::ops::deref::Deref>::deref"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 5544,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 77,
+                  "call": true,
+                  "function": "core::cell::RefCell<T>::borrow_mut"
+                },
+                "children": [
+                  {
+                    "instruction": 5544,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/cell.rs",
+                      "line": 1087,
+                      "call": false,
+                      "function": "core::cell::RefCell<T>::borrow_mut"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 5568,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 77,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 5584,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 77,
+                  "call": true,
+                  "function": "<nftminter::state::NftConfig as borsh::ser::BorshSerialize>::serialize"
+                },
+                "children": [
+                  {
+                    "instruction": 5584,
+                    "step": {
+                      "file": "programs/nftminter/src/state.rs",
+                      "line": 5,
+                      "call": false,
+                      "function": "<nftminter::state::NftConfig as borsh::ser::BorshSerialize>::serialize"
+                    },
+                    "children": [
+                      {
+                        "instruction": 5584,
+                        "step": {
+                          "file": "programs/nftminter/src/state.rs",
+                          "line": 5,
+                          "call": true,
+                          "function": "<solana_pubkey::Pubkey as borsh::ser::BorshSerialize>::serialize"
+                        },
+                        "children": [
+                          {
+                            "instruction": 5584,
+                            "step": {
+                              "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-pubkey-2.4.0/src/lib.rs",
+                              "line": 158,
+                              "call": false,
+                              "function": "<solana_pubkey::Pubkey as borsh::ser::BorshSerialize>::serialize"
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": 5664,
+                        "step": {
+                          "file": "programs/nftminter/src/state.rs",
+                          "line": 5,
+                          "call": true,
+                          "function": "<u8 as borsh::ser::BorshSerialize>::serialize"
+                        },
+                        "children": [
+                          {
+                            "instruction": 5664,
+                            "step": {
+                              "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/ser/mod.rs",
+                              "line": 67,
+                              "call": false,
+                              "function": "<u8 as borsh::ser::BorshSerialize>::serialize"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "instruction": 6184,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 77,
+                  "call": true,
+                  "function": "core::ptr::drop_in_place<core::cell::RefMut<&mut [u8]>>"
+                },
+                "children": [
+                  {
+                    "instruction": 6184,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/ptr/mod.rs",
+                      "line": 521,
+                      "call": false,
+                      "function": "core::ptr::drop_in_place<core::cell::RefMut<&mut [u8]>>"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 6208,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 79,
+                  "call": true,
+                  "function": "core::fmt::Arguments::new_v1"
+                },
+                "children": [
+                  {
+                    "instruction": 6208,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/fmt/mod.rs",
+                      "line": 348,
+                      "call": false,
+                      "function": "core::fmt::Arguments::new_v1"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 6256,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 79,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 6360,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 79,
+                  "call": true,
+                  "function": "core::hint::must_use"
+                },
+                "children": [
+                  {
+                    "instruction": 6360,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/hint.rs",
+                      "line": 512,
+                      "call": false,
+                      "function": "core::hint::must_use"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 6376,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 79,
+                  "call": true,
+                  "function": "solana_msg::sol_log"
+                },
+                "children": [
+                  {
+                    "instruction": 6376,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-msg-2.2.1/src/lib.rs",
+                      "line": 41,
+                      "call": false,
+                      "function": "solana_msg::sol_log"
+                    },
+                    "children": []
+                  },
+                  {
+                    "instruction": 6376,
+                    "step": {
+                      "file": "",
+                      "line": 0,
+                      "call": false,
+                      "function": "Program log: NFT config initialized by 8gSyVocYMwj3XXg5ev3DRdg2HD6xxv978VByRU3v7JBs"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 6400,
+                "step": {
+                  "file": "programs/nftminter/src/lib.rs",
+                  "line": 80,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "instruction": 6408,
+        "step": {
+          "file": "programs/nftminter/src/lib.rs",
+          "line": 33,
+          "call": true,
+          "function": "nftminter::mint_contributor_badge"
+        },
+        "children": [
+          {
+            "instruction": 6408,
+            "step": {
+              "file": "programs/nftminter/src/lib.rs",
+              "line": 83,
+              "call": false,
+              "function": "nftminter::mint_contributor_badge"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "instruction": 3976,
+        "step": {
+          "file": "programs/nftminter/src/lib.rs",
+          "line": 35,
+          "call": false,
+          "function": null
+        },
+        "children": [
+          {
+            "instruction": 3976,
+            "step": {
+              "file": "",
+              "line": 0,
+              "call": false,
+              "function": "Program 77HwdkkBCvZGVYWQHuPE63WVegnP6Unaq3DL7Du2ab5H consumed 6836 of 600000 compute units"
+            },
+            "children": []
+          },
+          {
+            "instruction": 3976,
+            "step": {
+              "file": "",
+              "line": 0,
+              "call": false,
+              "function": "Program 77HwdkkBCvZGVYWQHuPE63WVegnP6Unaq3DL7Du2ab5H success"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,576 @@
+[
+  {
+    "instruction": 8680,
+    "step": {
+      "file": "programs/manager/src/lib.rs",
+      "line": 26,
+      "call": false,
+      "function": "manager::process_instruction"
+    },
+    "children": [
+      {
+        "instruction": 8696,
+        "step": {
+          "file": "programs/manager/src/lib.rs",
+          "line": 31,
+          "call": true,
+          "function": "borsh::de::BorshDeserialize::try_from_slice"
+        },
+        "children": [
+          {
+            "instruction": 8696,
+            "step": {
+              "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+              "line": 46,
+              "call": false,
+              "function": "borsh::de::BorshDeserialize::try_from_slice"
+            },
+            "children": [
+              {
+                "instruction": 8696,
+                "step": {
+                  "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+                  "line": 40,
+                  "call": true,
+                  "function": "<manager::Instruction as borsh::de::BorshDeserialize>::deserialize_reader"
+                },
+                "children": [
+                  {
+                    "instruction": 8696,
+                    "step": {
+                      "file": "programs/manager/src/lib.rs",
+                      "line": 20,
+                      "call": false,
+                      "function": "<manager::Instruction as borsh::de::BorshDeserialize>::deserialize_reader"
+                    },
+                    "children": [
+                      {
+                        "instruction": 8696,
+                        "step": {
+                          "file": "programs/manager/src/lib.rs",
+                          "line": 20,
+                          "call": true,
+                          "function": "<u8 as borsh::de::BorshDeserialize>::deserialize_reader"
+                        },
+                        "children": [
+                          {
+                            "instruction": 8696,
+                            "step": {
+                              "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+                              "line": 148,
+                              "call": false,
+                              "function": "<u8 as borsh::de::BorshDeserialize>::deserialize_reader"
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": 8728,
+                        "step": {
+                          "file": "programs/manager/src/lib.rs",
+                          "line": 20,
+                          "call": true,
+                          "function": "<manager::Instruction as borsh::de::EnumExt>::deserialize_variant"
+                        },
+                        "children": [
+                          {
+                            "instruction": 8728,
+                            "step": {
+                              "file": "programs/manager/src/lib.rs",
+                              "line": 20,
+                              "call": false,
+                              "function": "<manager::Instruction as borsh::de::EnumExt>::deserialize_variant"
+                            },
+                            "children": [
+                              {
+                                "instruction": 10656,
+                                "step": {
+                                  "file": "programs/manager/src/lib.rs",
+                                  "line": 20,
+                                  "call": true,
+                                  "function": "<u64 as borsh::de::BorshDeserialize>::deserialize_reader"
+                                },
+                                "children": [
+                                  {
+                                    "instruction": 10656,
+                                    "step": {
+                                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+                                      "line": 201,
+                                      "call": false,
+                                      "function": "<u64 as borsh::de::BorshDeserialize>::deserialize_reader"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "instruction": 10912,
+        "step": {
+          "file": "programs/manager/src/lib.rs",
+          "line": 35,
+          "call": true,
+          "function": "manager::contribute"
+        },
+        "children": [
+          {
+            "instruction": 10912,
+            "step": {
+              "file": "programs/manager/src/lib.rs",
+              "line": 107,
+              "call": false,
+              "function": "manager::contribute"
+            },
+            "children": [
+              {
+                "instruction": 10912,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 110,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 10912,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 10936,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 111,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 10936,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 11144,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 112,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 11144,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 11184,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 113,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 11184,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 11200,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 114,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 11200,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 11240,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 115,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 11240,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 11296,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 116,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 11296,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 11416,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 117,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 11416,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 11448,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 118,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 11448,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 11480,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 119,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 11480,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 11544,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 120,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 11544,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 11904,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 121,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 11904,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 11928,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 123,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 11960,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 129,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 12032,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 130,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 12104,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 131,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 12176,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 132,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 12248,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 128,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 12448,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 139,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 12488,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 140,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 12528,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 141,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 12568,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 142,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 12608,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 143,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 12648,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 138,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 12856,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 136,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instruction": 7784,
+    "step": {
+      "file": "programs/manager/src/treasury_instruction.rs",
+      "line": 31,
+      "call": false,
+      "function": "manager::treasury_instruction::deposit_funds_ix"
+    },
+    "children": [
+      {
+        "instruction": 7784,
+        "step": {
+          "file": "programs/manager/src/treasury_instruction.rs",
+          "line": 31,
+          "call": false,
+          "function": null
+        },
+        "children": []
+      },
+      {
+        "instruction": 7944,
+        "step": {
+          "file": "programs/manager/src/treasury_instruction.rs",
+          "line": 40,
+          "call": false,
+          "function": null
+        },
+        "children": []
+      },
+      {
+        "instruction": 8336,
+        "step": {
+          "file": "programs/manager/src/treasury_instruction.rs",
+          "line": 38,
+          "call": false,
+          "function": null
+        },
+        "children": []
+      },
+      {
+        "instruction": 8448,
+        "step": {
+          "file": "programs/manager/src/treasury_instruction.rs",
+          "line": 48,
+          "call": false,
+          "function": null
+        },
+        "children": []
+      }
+    ]
+  }
+]

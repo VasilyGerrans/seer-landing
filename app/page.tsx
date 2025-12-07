@@ -1,6 +1,7 @@
 "use client"
 
 import CalendlyEmbed from "@/components/calendly"
+import TracerView from "@/components/tracer/tracer-view";
 import Image from "next/image";
 
 const WEBM = "https://jisuqfpci6hqytbh.public.blob.vercel-storage.com/eye.webm";
@@ -40,10 +41,7 @@ export default function Home() {
           </video>
         </div>
 
-        {/* Content Overlay */}
         <div className="relative z-10 flex flex-col min-h-screen px-6 md:px-12 lg:px-20">
-
-          {/* Header */}
           <header className="flex justify-between items-center pt-6 md:pt-8 lg:pt-12">
             <Image
               src="/images/logo.png"
@@ -93,13 +91,11 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* Transaction Debugging Section */}
       <section
         id="learn-more"
-        className="relative flex items-center justify-center px-6 md:px-12 lg:px-24 py-20"
+        className="relative flex items-center justify-center px-6 md:px-12 lg:px-10 py-20"
       >
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
           {/* Title */}
           <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-black mb-8 md:mb-10">
             Transaction debugging should be quick
@@ -160,15 +156,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Introducing Seer Section */}
       <section
-        className="relative flex items-center justify-center px-6 md:px-12 lg:px-24 py-20"
+        className="relative flex items-center justify-center px-6 md:px-12 lg:px-10 py-20"
       >
-        <div className="max-w-3xl">
-          {/* Title */}
+        <div className="max-w-5xl">
           <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-black mb-8 md:mb-10">Introducing Seer</h2>
-
-          {/* Content */}
           <div className="text-white text-sm md:text-base space-y-6 font-medium">
             <div className="max-w-2xl mx-auto py-4">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 md:h-14">
@@ -210,7 +202,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="my-8 mt-10 mb-10 overflow-hidden rounded-2xl">
+            {/* <div className="my-8 mt-10 mb-10 overflow-hidden rounded-2xl">
               <video
                 autoPlay
                 loop
@@ -220,7 +212,7 @@ export default function Home() {
                 <source src={WEBM_TRACE} type="video/webm" />
                 <source src={MP4_TRACE} type="video/mp4" />
               </video>
-            </div>
+            </div> */}
 
             <p className="leading-relaxed">
               The Seer RPC is a drop-in replacement for <code className="bg-white/10 px-2 py-1 rounded">solana-test-validator</code>,
@@ -235,21 +227,20 @@ export default function Home() {
             <p className="leading-relaxed">
               Every transaction error comes with the exact line, exact state, and exact backtrace in source code.
             </p>
+
+            <TracerView hash="joSD488VSTKdFWAmhSZ5mVLmUEheSjegX3yd2PFCGG7mvef5AYTaBNPNw9UGXWuZsDKwAumCFAUkrk2Xmepwyxq" />
           </div>
         </div>
       </section>
 
       <section
-        className="relative flex items-center justify-center px-6 md:px-12 lg:px-24 py-20"
+        className="relative flex items-center justify-center px-6 md:px-12 lg:px-10 py-20"
         style={{ paddingBottom: "0px" }}
       >
-        <div className="max-w-3xl w-full">
-          {/* Title */}
+        <div className="max-w-4xl w-full">
           <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-black mb-12 md:mb-16 text-center">
             Closed Beta Coming January 2026
           </h2>
-
-          {/* Timeline */}
           <div className="space-y-4 mb-12 md:mb-16">
             <div className="flex items-center gap-4 text-white text-sm md:text-base font-medium">
               <span className="text-green-500 text-xl">✓</span>
@@ -279,7 +270,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="early-access" className="px-6 md:px-12 lg:px-24 py-20">
+      <section id="early-access" className="px-6 md:px-12 lg:px-10 py-20">
         <div className="w-full flex justify-center gap-6 mb-4">
           <a
             href="https://www.linkedin.com/in/vasilygerrans/"
@@ -332,16 +323,12 @@ export default function Home() {
         <CalendlyEmbed />
       </section>
 
-      {/* Footer */}
       <footer
         className="relative border-t border-white/20 px-6 md:px-12 lg:px-24 py-12"
       >
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-white text-sm font-medium">
-            {/* Copyright */}
             <div className="text-white/70">2025 Seer © All Rights Reserved</div>
-
-            {/* Social/External Links */}
             <div className="flex gap-6">
               <a href="https://arena.colosseum.org/projects/explore/seer" target="_blank"
                 rel="noopener noreferrer" className="text-white hover:text-white/70 transition-colors">

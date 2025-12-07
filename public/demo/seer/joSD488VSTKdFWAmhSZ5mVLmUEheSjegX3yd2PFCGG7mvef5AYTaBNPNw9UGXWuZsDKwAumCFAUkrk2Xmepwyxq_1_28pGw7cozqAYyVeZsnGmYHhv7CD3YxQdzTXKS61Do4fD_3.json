@@ -1,0 +1,264 @@
+[
+  {
+    "instruction": 10272,
+    "step": {
+      "file": "programs/manager/src/lib.rs",
+      "line": 26,
+      "call": false,
+      "function": "manager::process_instruction"
+    },
+    "children": [
+      {
+        "instruction": 10272,
+        "step": {
+          "file": "programs/manager/src/lib.rs",
+          "line": 34,
+          "call": true,
+          "function": "manager::create_campaign"
+        },
+        "children": [
+          {
+            "instruction": 10272,
+            "step": {
+              "file": "programs/manager/src/lib.rs",
+              "line": 39,
+              "call": false,
+              "function": "manager::create_campaign"
+            },
+            "children": [
+              {
+                "instruction": 10272,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 81,
+                  "call": true,
+                  "function": "<core::result::Result<T,E> as core::ops::try_trait::Try>::branch"
+                },
+                "children": [
+                  {
+                    "instruction": 10272,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/result.rs",
+                      "line": 1995,
+                      "call": false,
+                      "function": "<core::result::Result<T,E> as core::ops::try_trait::Try>::branch"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 10320,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 90,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 10328,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 93,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 10480,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 101,
+                  "call": true,
+                  "function": "<alloc::rc::Rc<T,A> as core::ops::deref::Deref>::deref"
+                },
+                "children": [
+                  {
+                    "instruction": 10480,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/alloc/src/rc.rs",
+                      "line": 2227,
+                      "call": false,
+                      "function": "<alloc::rc::Rc<T,A> as core::ops::deref::Deref>::deref"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 10496,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 101,
+                  "call": true,
+                  "function": "core::cell::RefCell<T>::borrow_mut"
+                },
+                "children": [
+                  {
+                    "instruction": 10496,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/cell.rs",
+                      "line": 1087,
+                      "call": false,
+                      "function": "core::cell::RefCell<T>::borrow_mut"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 10520,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 101,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 11648,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 101,
+                  "call": true,
+                  "function": "core::ptr::drop_in_place<core::cell::RefMut<&mut [u8]>>"
+                },
+                "children": [
+                  {
+                    "instruction": 11648,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/ptr/mod.rs",
+                      "line": 521,
+                      "call": false,
+                      "function": "core::ptr::drop_in_place<core::cell::RefMut<&mut [u8]>>"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 11672,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 102,
+                  "call": true,
+                  "function": "core::fmt::Arguments::new_v1"
+                },
+                "children": [
+                  {
+                    "instruction": 11672,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/fmt/mod.rs",
+                      "line": 348,
+                      "call": false,
+                      "function": "core::fmt::Arguments::new_v1"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 11720,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 102,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 11832,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 102,
+                  "call": true,
+                  "function": "core::hint::must_use"
+                },
+                "children": [
+                  {
+                    "instruction": 11832,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/hint.rs",
+                      "line": 512,
+                      "call": false,
+                      "function": "core::hint::must_use"
+                    },
+                    "children": [
+                      {
+                        "instruction": 11848,
+                        "step": {
+                          "file": "",
+                          "line": 0,
+                          "call": false,
+                          "function": "Program log: Campaign created with goal 5000000000 lamports"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "instruction": 11080,
+        "step": {
+          "file": "programs/manager/src/lib.rs",
+          "line": 37,
+          "call": false,
+          "function": null
+        },
+        "children": [
+          {
+            "instruction": 11080,
+            "step": {
+              "file": "",
+              "line": 0,
+              "call": false,
+              "function": "Program 28pGw7cozqAYyVeZsnGmYHhv7CD3YxQdzTXKS61Do4fD consumed 17279 of 593164 compute units"
+            },
+            "children": []
+          },
+          {
+            "instruction": 11080,
+            "step": {
+              "file": "",
+              "line": 0,
+              "call": false,
+              "function": "Program 28pGw7cozqAYyVeZsnGmYHhv7CD3YxQdzTXKS61Do4fD success"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instruction": 15568,
+    "step": {
+      "file": "programs/manager/src/state.rs",
+      "line": 5,
+      "call": false,
+      "function": "<manager::state::Campaign as borsh::ser::BorshSerialize>::serialize"
+    },
+    "children": [
+      {
+        "instruction": 15568,
+        "step": {
+          "file": "programs/manager/src/state.rs",
+          "line": 5,
+          "call": false,
+          "function": null
+        },
+        "children": []
+      }
+    ]
+  }
+]

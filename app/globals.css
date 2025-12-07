@@ -1,80 +1,102 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
 @custom-variant dark (&:is(.dark *));
 
+/* --------------------------
+   LIGHT THEME (root)
+--------------------------- */
 :root {
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --foreground: oklch(0.20 0 0);            /* dark text */
+  --card: oklch(0.98 0 0);                  /* white-ish */
+  --card-foreground: oklch(0.20 0 0);
+  --popover: oklch(0.98 0 0);
+  --popover-foreground: oklch(0.20 0 0);
+  --primary: oklch(0.25 0 0);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.92 0 0);
+  --secondary-foreground: oklch(0.25 0 0);
+  --muted: oklch(0.92 0 0);
+  --muted-foreground: oklch(0.55 0 0);
+  --accent: oklch(1 0 126);
+  --accent-foreground: oklch(1 0 126);
+  --destructive: oklch(0.57 0.24 27.3);
+  --destructive-foreground: oklch(0.15 0 0);
+  --border: oklch(0.88 0 0);
+  --input: oklch(0.88 0 0);
+  --ring: oklch(0.70 0 0);
+
+  /* charts unchanged */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
+
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+
+  /* sidebar – light */
+  --sidebar: oklch(0.98 0 0);
+  --sidebar-foreground: oklch(0.20 0 0);
+  --sidebar-primary: oklch(0.25 0 0);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.92 0 0);
+  --sidebar-accent-foreground: oklch(0.25 0 0);
+  --sidebar-border: oklch(0.88 0 0);
+  --sidebar-ring: oklch(0.70 0 0);
 }
 
+/* --------------------------
+   DARK THEME
+   (this is what your snippet uses)
+--------------------------- */
 .dark {
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --foreground: oklch(0.96 0 0);                 /* main text bright */
+  --card: oklch(0.15 0 0);                       /* main card bg */
+  --card-foreground: oklch(0.96 0 0);
+  --popover: oklch(0.15 0 0);
+  --popover-foreground: oklch(0.96 0 0);
+
+  --primary: oklch(0.6533 0.1579 265.76);                    /* brighter CTA */
+  --primary-foreground: oklch(0.15 0 0);
+
+  --secondary: oklch(0.22 0 0);                  /* section header bg */
+  --secondary-foreground: oklch(0.96 0 0);
+
+  --muted: oklch(0.22 0 0);
+  --muted-foreground: oklch(0.70 0 0);
+
+  --accent: oklch(0.8133 0 7.41);
+  --accent-foreground: oklch(1 0 126);
+
+  --destructive: oklch(0.6412 0.2689 29.65);
+  --destructive-foreground: oklch(0.96 0 0);
+
+  --border: oklch(0.23 0 0);                     /* subtle border */
+  --input: oklch(0.23 0 0);
+  --ring: oklch(0.55 0 0);
+
+  --chart-1: oklch(0.52 0.24 264);
+  --chart-2: oklch(0.65 0.17 162);
+  --chart-3: oklch(0.78 0.19 70);
+  --chart-4: oklch(0.62 0.26 304);
+  --chart-5: oklch(0.64 0.24 16);
+
+  /* sidebar – proper dark styling */
+  --sidebar: oklch(0.12 0 0);
+  --sidebar-foreground: oklch(0.96 0 0);
+  --sidebar-primary: oklch(0.45 0.24 264);
+  --sidebar-primary-foreground: oklch(0.96 0 0);
+  --sidebar-accent: oklch(0.22 0 0);
+  --sidebar-accent-foreground: oklch(0.96 0 0);
+  --sidebar-border: oklch(0.22 0 0);
+  --sidebar-ring: oklch(0.55 0 0);
 }
 
+/* --------------------------
+   TAILWIND THEME MAPPINGS
+--------------------------- */
 @theme inline {
-  /* Updated font-sans to use Acumin Pro Wide from Adobe Typekit */
   --font-sans: "acumin-pro-wide", "Geist", "Geist Fallback";
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-foreground: var(--foreground);
@@ -114,12 +136,14 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* --------------------------
+   BASE LAYER – enforce full dark background
+--------------------------- */
 @layer base {
-
-  html,
-  body {
+  html, body {
     background: #01040f !important;
     background-color: #01040f !important;
+    color: var(--foreground);
   }
 
   * {
@@ -127,24 +151,21 @@
   }
 }
 
+/* keep your button styles unchanged */
 @layer components {
   .gradient-button {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
-    /* Hard reset all tailwind/shadcn crap */
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
     background: rgba(0, 0, 0, 0);
     color: white;
-
     padding: 0.6rem 1.3rem;
     border-radius: 9999px;
     font-weight: 500;
-
     transition:
       background 0.35s cubic-bezier(0.4, 0, 0.2, 1),
       color 0.35s cubic-bezier(0.4, 0, 0.2, 1),

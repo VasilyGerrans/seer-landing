@@ -1,0 +1,639 @@
+[
+  {
+    "instruction": 3104,
+    "step": {
+      "file": "programs/treasury/src/lib.rs",
+      "line": 25,
+      "call": false,
+      "function": "treasury::process_instruction"
+    },
+    "children": [
+      {
+        "instruction": 3120,
+        "step": {
+          "file": "programs/treasury/src/lib.rs",
+          "line": 30,
+          "call": true,
+          "function": "borsh::de::BorshDeserialize::try_from_slice"
+        },
+        "children": [
+          {
+            "instruction": 3120,
+            "step": {
+              "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+              "line": 46,
+              "call": false,
+              "function": "borsh::de::BorshDeserialize::try_from_slice"
+            },
+            "children": [
+              {
+                "instruction": 3120,
+                "step": {
+                  "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+                  "line": 40,
+                  "call": true,
+                  "function": "<treasury::Instruction as borsh::de::BorshDeserialize>::deserialize_reader"
+                },
+                "children": [
+                  {
+                    "instruction": 3120,
+                    "step": {
+                      "file": "programs/treasury/src/lib.rs",
+                      "line": 19,
+                      "call": false,
+                      "function": "<treasury::Instruction as borsh::de::BorshDeserialize>::deserialize_reader"
+                    },
+                    "children": [
+                      {
+                        "instruction": 3120,
+                        "step": {
+                          "file": "programs/treasury/src/lib.rs",
+                          "line": 19,
+                          "call": true,
+                          "function": "<u8 as borsh::de::BorshDeserialize>::deserialize_reader"
+                        },
+                        "children": [
+                          {
+                            "instruction": 3120,
+                            "step": {
+                              "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+                              "line": 148,
+                              "call": false,
+                              "function": "<u8 as borsh::de::BorshDeserialize>::deserialize_reader"
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": 3152,
+                        "step": {
+                          "file": "programs/treasury/src/lib.rs",
+                          "line": 19,
+                          "call": true,
+                          "function": "<treasury::Instruction as borsh::de::EnumExt>::deserialize_variant"
+                        },
+                        "children": [
+                          {
+                            "instruction": 3152,
+                            "step": {
+                              "file": "programs/treasury/src/lib.rs",
+                              "line": 19,
+                              "call": false,
+                              "function": "<treasury::Instruction as borsh::de::EnumExt>::deserialize_variant"
+                            },
+                            "children": [
+                              {
+                                "instruction": 3168,
+                                "step": {
+                                  "file": "programs/treasury/src/lib.rs",
+                                  "line": 19,
+                                  "call": true,
+                                  "function": "<u64 as borsh::de::BorshDeserialize>::deserialize_reader"
+                                },
+                                "children": [
+                                  {
+                                    "instruction": 3168,
+                                    "step": {
+                                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+                                      "line": 201,
+                                      "call": false,
+                                      "function": "<u64 as borsh::de::BorshDeserialize>::deserialize_reader"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "instruction": 3480,
+        "step": {
+          "file": "programs/treasury/src/lib.rs",
+          "line": 34,
+          "call": true,
+          "function": "treasury::process_deposit_funds"
+        },
+        "children": [
+          {
+            "instruction": 3480,
+            "step": {
+              "file": "programs/treasury/src/lib.rs",
+              "line": 88,
+              "call": false,
+              "function": "treasury::process_deposit_funds"
+            },
+            "children": [
+              {
+                "instruction": 3480,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 95,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 3480,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 3504,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 96,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 3504,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 3528,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 97,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 3528,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 3784,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 98,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 3784,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 4208,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 101,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 4232,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 108,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 4352,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 107,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 4416,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 110,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 4424,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 110,
+                  "call": true,
+                  "function": "core::cmp::PartialEq::ne"
+                },
+                "children": [
+                  {
+                    "instruction": 4424,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/cmp.rs",
+                      "line": 261,
+                      "call": false,
+                      "function": "core::cmp::PartialEq::ne"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 6240,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 116,
+                  "call": true,
+                  "function": "core::fmt::Arguments::new_v1"
+                },
+                "children": [
+                  {
+                    "instruction": 6240,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/fmt/mod.rs",
+                      "line": 348,
+                      "call": false,
+                      "function": "core::fmt::Arguments::new_v1"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 6288,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 116,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 6400,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 116,
+                  "call": true,
+                  "function": "core::hint::must_use"
+                },
+                "children": [
+                  {
+                    "instruction": 6400,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/hint.rs",
+                      "line": 512,
+                      "call": false,
+                      "function": "core::hint::must_use"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 6416,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 116,
+                  "call": true,
+                  "function": "solana_msg::sol_log"
+                },
+                "children": [
+                  {
+                    "instruction": 6416,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-msg-2.2.1/src/lib.rs",
+                      "line": 41,
+                      "call": false,
+                      "function": "solana_msg::sol_log"
+                    },
+                    "children": []
+                  },
+                  {
+                    "instruction": 6416,
+                    "step": {
+                      "file": "",
+                      "line": 0,
+                      "call": false,
+                      "function": "Program log: Transferring 1000000 lamports from contributor to vault..."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 6424,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 121,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 6504,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 126,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 6544,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 127,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 6568,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 125,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 6584,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 128,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 6704,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 123,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 6736,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 123,
+                  "call": true,
+                  "function": "<core::result::Result<T,E> as core::ops::try_trait::Try>::branch"
+                },
+                "children": [
+                  {
+                    "instruction": 6736,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/result.rs",
+                      "line": 1995,
+                      "call": false,
+                      "function": "<core::result::Result<T,E> as core::ops::try_trait::Try>::branch"
+                    },
+                    "children": []
+                  },
+                  {
+                    "instruction": 6728,
+                    "step": {
+                      "file": "",
+                      "line": 0,
+                      "call": false,
+                      "function": "Program 11111111111111111111111111111111 invoke [3]"
+                    },
+                    "children": []
+                  },
+                  {
+                    "instruction": 6728,
+                    "step": {
+                      "file": "",
+                      "line": 0,
+                      "call": false,
+                      "function": "Program 11111111111111111111111111111111 success"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 6784,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 130,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 6792,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 133,
+                  "call": true,
+                  "function": "<alloc::rc::Rc<T,A> as core::ops::deref::Deref>::deref"
+                },
+                "children": [
+                  {
+                    "instruction": 6792,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/alloc/src/rc.rs",
+                      "line": 2227,
+                      "call": false,
+                      "function": "<alloc::rc::Rc<T,A> as core::ops::deref::Deref>::deref"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 6808,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 133,
+                  "call": true,
+                  "function": "core::cell::RefCell<T>::borrow_mut"
+                },
+                "children": [
+                  {
+                    "instruction": 6808,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/cell.rs",
+                      "line": 1087,
+                      "call": false,
+                      "function": "core::cell::RefCell<T>::borrow_mut"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 6832,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 134,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 6872,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 134,
+                  "call": true,
+                  "function": "<core::result::Result<T,E> as core::ops::try_trait::Try>::branch"
+                },
+                "children": [
+                  {
+                    "instruction": 6872,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/result.rs",
+                      "line": 1995,
+                      "call": false,
+                      "function": "<core::result::Result<T,E> as core::ops::try_trait::Try>::branch"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 6896,
+                "step": {
+                  "file": "programs/treasury/src/lib.rs",
+                  "line": 134,
+                  "call": true,
+                  "function": "<core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual"
+                },
+                "children": [
+                  {
+                    "instruction": 6896,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/result.rs",
+                      "line": 2007,
+                      "call": false,
+                      "function": "<core::result::Result<T,F> as core::ops::try_trait::FromResidual<core::result::Result<core::convert::Infallible,E>>>::from_residual"
+                    },
+                    "children": [
+                      {
+                        "instruction": 16176,
+                        "step": {
+                          "file": "",
+                          "line": 0,
+                          "call": false,
+                          "function": "Program 317FJDenS4KLdQkbtuquvaYsE2UL5m9ApKvQxwq16NNu consumed 9835 of 572024 compute units"
+                        },
+                        "children": []
+                      },
+                      {
+                        "instruction": 16176,
+                        "step": {
+                          "file": "",
+                          "line": 0,
+                          "call": false,
+                          "function": "Program 317FJDenS4KLdQkbtuquvaYsE2UL5m9ApKvQxwq16NNu failed: Failed to serialize or deserialize account data"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "instruction": 3672,
+        "step": {
+          "file": "programs/treasury/src/lib.rs",
+          "line": 36,
+          "call": false,
+          "function": null
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "instruction": 2560,
+    "step": {
+      "file": "programs/treasury/src/state.rs",
+      "line": 6,
+      "call": false,
+      "function": "<treasury::state::Vault as borsh::de::BorshDeserialize>::deserialize_reader"
+    },
+    "children": [
+      {
+        "instruction": 2560,
+        "step": {
+          "file": "programs/treasury/src/state.rs",
+          "line": 6,
+          "call": false,
+          "function": null
+        },
+        "children": [
+          {
+            "instruction": 16176,
+            "step": {
+              "file": "",
+              "line": 0,
+              "call": true,
+              "function": "Failed to serialize or deserialize account data"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

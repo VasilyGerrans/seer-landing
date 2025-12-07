@@ -1,0 +1,560 @@
+[
+  {
+    "instruction": 8680,
+    "step": {
+      "file": "programs/manager/src/lib.rs",
+      "line": 26,
+      "call": false,
+      "function": "manager::process_instruction"
+    },
+    "children": [
+      {
+        "instruction": 8696,
+        "step": {
+          "file": "programs/manager/src/lib.rs",
+          "line": 31,
+          "call": true,
+          "function": "borsh::de::BorshDeserialize::try_from_slice"
+        },
+        "children": [
+          {
+            "instruction": 8696,
+            "step": {
+              "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+              "line": 46,
+              "call": false,
+              "function": "borsh::de::BorshDeserialize::try_from_slice"
+            },
+            "children": [
+              {
+                "instruction": 8696,
+                "step": {
+                  "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+                  "line": 40,
+                  "call": true,
+                  "function": "<manager::Instruction as borsh::de::BorshDeserialize>::deserialize_reader"
+                },
+                "children": [
+                  {
+                    "instruction": 8696,
+                    "step": {
+                      "file": "programs/manager/src/lib.rs",
+                      "line": 20,
+                      "call": false,
+                      "function": "<manager::Instruction as borsh::de::BorshDeserialize>::deserialize_reader"
+                    },
+                    "children": [
+                      {
+                        "instruction": 8696,
+                        "step": {
+                          "file": "programs/manager/src/lib.rs",
+                          "line": 20,
+                          "call": true,
+                          "function": "<u8 as borsh::de::BorshDeserialize>::deserialize_reader"
+                        },
+                        "children": [
+                          {
+                            "instruction": 8696,
+                            "step": {
+                              "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+                              "line": 148,
+                              "call": false,
+                              "function": "<u8 as borsh::de::BorshDeserialize>::deserialize_reader"
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "instruction": 8728,
+                        "step": {
+                          "file": "programs/manager/src/lib.rs",
+                          "line": 20,
+                          "call": true,
+                          "function": "<manager::Instruction as borsh::de::EnumExt>::deserialize_variant"
+                        },
+                        "children": [
+                          {
+                            "instruction": 8728,
+                            "step": {
+                              "file": "programs/manager/src/lib.rs",
+                              "line": 20,
+                              "call": false,
+                              "function": "<manager::Instruction as borsh::de::EnumExt>::deserialize_variant"
+                            },
+                            "children": [
+                              {
+                                "instruction": 8744,
+                                "step": {
+                                  "file": "programs/manager/src/lib.rs",
+                                  "line": 20,
+                                  "call": true,
+                                  "function": "<u64 as borsh::de::BorshDeserialize>::deserialize_reader"
+                                },
+                                "children": [
+                                  {
+                                    "instruction": 8744,
+                                    "step": {
+                                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/borsh-1.5.7/src/de/mod.rs",
+                                      "line": 201,
+                                      "call": false,
+                                      "function": "<u64 as borsh::de::BorshDeserialize>::deserialize_reader"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "instruction": 8776,
+        "step": {
+          "file": "programs/manager/src/lib.rs",
+          "line": 34,
+          "call": true,
+          "function": "manager::create_campaign"
+        },
+        "children": [
+          {
+            "instruction": 8776,
+            "step": {
+              "file": "programs/manager/src/lib.rs",
+              "line": 39,
+              "call": false,
+              "function": "manager::create_campaign"
+            },
+            "children": [
+              {
+                "instruction": 8776,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 42,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 8776,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 8800,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 43,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 8800,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 8824,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 44,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 8824,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 8848,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 45,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 8848,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 8872,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 46,
+                  "call": true,
+                  "function": "solana_account_info::next_account_info"
+                },
+                "children": [
+                  {
+                    "instruction": 8872,
+                    "step": {
+                      "file": "/Users/vasilygerrans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/solana-account-info-2.3.0/src/lib.rs",
+                      "line": 343,
+                      "call": false,
+                      "function": "solana_account_info::next_account_info"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 8880,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 48,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 8904,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 58,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 8912,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 57,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 8920,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 56,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9048,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 67,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9088,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 68,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9112,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 66,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9128,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 69,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9248,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 64,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9280,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 64,
+                  "call": true,
+                  "function": "<core::result::Result<T,E> as core::ops::try_trait::Try>::branch"
+                },
+                "children": [
+                  {
+                    "instruction": 9280,
+                    "step": {
+                      "file": "/Users/runner/work/platform-tools/platform-tools/out/rust/library/core/src/result.rs",
+                      "line": 1995,
+                      "call": false,
+                      "function": "<core::result::Result<T,E> as core::ops::try_trait::Try>::branch"
+                    },
+                    "children": []
+                  },
+                  {
+                    "instruction": 9272,
+                    "step": {
+                      "file": "",
+                      "line": 0,
+                      "call": false,
+                      "function": "Program 11111111111111111111111111111111 invoke [2]"
+                    },
+                    "children": []
+                  },
+                  {
+                    "instruction": 9272,
+                    "step": {
+                      "file": "",
+                      "line": 0,
+                      "call": false,
+                      "function": "Program 11111111111111111111111111111111 success"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "instruction": 9328,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 71,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9344,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 75,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9432,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 76,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9504,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 77,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9568,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 78,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9640,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 74,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9880,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 84,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9920,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 85,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 9960,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 86,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 10000,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 87,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 10024,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 83,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 10040,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 88,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              },
+              {
+                "instruction": 10240,
+                "step": {
+                  "file": "programs/manager/src/lib.rs",
+                  "line": 81,
+                  "call": false,
+                  "function": null
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instruction": 6904,
+    "step": {
+      "file": "programs/manager/src/treasury_instruction.rs",
+      "line": 13,
+      "call": false,
+      "function": "manager::treasury_instruction::create_vault_ix"
+    },
+    "children": [
+      {
+        "instruction": 6904,
+        "step": {
+          "file": "programs/manager/src/treasury_instruction.rs",
+          "line": 13,
+          "call": false,
+          "function": null
+        },
+        "children": []
+      },
+      {
+        "instruction": 7048,
+        "step": {
+          "file": "programs/manager/src/treasury_instruction.rs",
+          "line": 21,
+          "call": false,
+          "function": null
+        },
+        "children": []
+      },
+      {
+        "instruction": 7440,
+        "step": {
+          "file": "programs/manager/src/treasury_instruction.rs",
+          "line": 19,
+          "call": false,
+          "function": null
+        },
+        "children": []
+      },
+      {
+        "instruction": 7552,
+        "step": {
+          "file": "programs/manager/src/treasury_instruction.rs",
+          "line": 29,
+          "call": false,
+          "function": null
+        },
+        "children": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+{
+    "77HwdkkBCvZGVYWQHuPE63WVegnP6Unaq3DL7Du2ab5H": {
+        "name": "nftminter",
+        "path": "programs/nftminter/"
+    },
+    "28pGw7cozqAYyVeZsnGmYHhv7CD3YxQdzTXKS61Do4fD": {
+        "name": "manager",
+        "path": "programs/manager/"
+    },
+    "317FJDenS4KLdQkbtuquvaYsE2UL5m9ApKvQxwq16NNu": {
+        "name": "treasury",
+        "path": "programs/treasury/"
+    }
+}
